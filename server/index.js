@@ -5,7 +5,6 @@
     let app = express();
     let http = require('http').Server(app);
     let io = require('socket.io')(http);
-    let port = process.env.PORT || 3000;
 
     app.use(express.static(__dirname + '/../build'));
 
@@ -26,7 +25,7 @@
         });
     });
 
-    http.listen(port, function(){
-        console.log('listening on *:' + port);
+    http.listen((process.env.PORT || 3000), function(){
+        console.log('listening on *:' + (process.env.PORT || 3000));
     });
 }())

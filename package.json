@@ -19,7 +19,8 @@
     "react-scripts": "0.9.5"
   },
   "scripts": {
-    "start": "npm install && react-scripts build && node server/index.js",
+    "start": "npm install && node server/index.js",
+    "build": "react-scripts build",
     "start-dev": "react-scripts start",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

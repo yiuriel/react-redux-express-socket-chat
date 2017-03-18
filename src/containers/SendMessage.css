@@ -1,0 +1,27 @@
+.message-send {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    border-top: 1px solid dodgerblue;
+}
+
+.message-send input {
+    padding: .5rem;
+    height: 32px;
+    width: 80%;
+    margin: 0;
+    border: 0;
+    font-size: 13px;
+    line-height: 32px;
+}
+
+.message-send button {
+    margin: 0;
+    width: 20%;
+    border: 0;
+    padding: 0;
+    height: 32px;
+    background-color: dodgerblue;
+    font-size: 13px;
+    color: white;
+}

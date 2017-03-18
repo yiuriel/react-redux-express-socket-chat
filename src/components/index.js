@@ -1,8 +1,12 @@
 import React from 'react'
 
+import SendMessage from '../containers/SendMessage';
+import MessagesView from '../containers/MessagesView';
+
 const App = () => (
-  <div>
-    <p>chat</p>
+  <div className="chat-container">
+    <MessagesView></MessagesView>
+    <SendMessage></SendMessage>
   </div>
 )
 

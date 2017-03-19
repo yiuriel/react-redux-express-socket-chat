@@ -14,7 +14,7 @@ let Message = ({ dispatch, user }) => {
   if (process.env.NODE_ENV === 'production') {
     socket = io();
     socket.on('chat message', function (msg) {
-      dispatch(addMessage(msg.message, user))
+      dispatch(addMessage(msg.message, msg.user_name))
     });
   }
 

@@ -1,3 +1,18 @@
+@media all and (max-width: 768px) {
+    .message-send {
+        height: 10vh;
+    }
+
+    .message-send form input {
+        font-size: 16px;
+        width: 50%;
+    }
+
+    .message-send form button {
+        width: 50%;
+    }
+}
+
 .message-send {
     position: absolute;
     width: 100%;

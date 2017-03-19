@@ -2,8 +2,7 @@ import { connect } from 'react-redux'
 import ShowMessages from '../components/ShowMessages'
 
 const mapStateToProps = (state) => ({
-  messages: state.messages,
-  user: state.user.user_name
+  messages: state.messages
 })
 
 const mapDispatchToProps = null

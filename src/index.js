@@ -22,6 +22,7 @@ if (user === null) {
   browserHistory.push("/");
 } else {
   store.dispatch(user);
+  browserHistory.push("/chat");
 }
  
 ReactDOM.render(

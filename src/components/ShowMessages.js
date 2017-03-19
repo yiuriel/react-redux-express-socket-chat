@@ -3,13 +3,12 @@ import Message from './Message'
 
 import './ShowMessages.css'
 
-const Messages = ({ messages, user }) => (
+const Messages = ({ messages }) => (
   <div className="messages-view">
     {messages.map(message =>
       <Message
         key={message.id}
         {...message}
-        user={user}
       />
     )}
   </div>

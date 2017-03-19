@@ -1,9 +1,10 @@
 var id = 0;
-export const addMessage = (message) => ({
+export const addMessage = (message, user_name) => ({
     type: 'ADD_MESSAGE',
     id: id++,
     date: new Date().toTimeString(),
-    message
+    message,
+    user_name
 });
 
 export const addUser = (user_name) => ({

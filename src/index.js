@@ -12,9 +12,18 @@ import reducer from './reducers'
 import Root from './containers/Root'
 import initialState from './initial/state';
 
+import Storage from './helpers/LocalStorage';
+
 const store = createStore(reducer, initialState);
 const history = syncHistoryWithStore(browserHistory, store);
 
+const user = Storage.getItem("user");
+if (user === null) {
+  browserHistory.push("/");
+} else {
+  store.dispatch(user);
+}
+ 
 ReactDOM.render(
   <Root store={store} history={history} />,
   document.getElementById('root')

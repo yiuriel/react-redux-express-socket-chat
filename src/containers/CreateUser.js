@@ -5,6 +5,8 @@ import { connect } from 'react-redux'
 import { addUser } from '../actions'
 import { browserHistory } from 'react-router'
 
+import Storage from '../helpers/LocalStorage';
+
 import './CreateUser.css';
 
 let User = ({ dispatch }) => {
@@ -17,7 +19,9 @@ let User = ({ dispatch }) => {
         if (!input.value.trim()) {
           return
         }
-        dispatch(addUser(input.value))
+        let user = addUser(input.value);
+        Storage.setItem('user', user);
+        dispatch(user);
         input.value = ''
         browserHistory.push('/chat');
       }}>

@@ -1,0 +1,34 @@
+.user-create {
+    height: 100vh;
+    width: 100vw;
+    background-color: #563d7c;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-create form label {
+    font-family: "Roboto";
+    font-weight: 100;
+    color: white;
+}
+
+.user-create form input.form-control {
+    border: 0;
+    border-bottom: 1px solid white;
+    box-shadow: none;
+    outline: 0;
+    background-color: transparent;
+    border-radius: 0;
+    color: white;
+}
+
+.user-create form button {
+    border-radius: 0;
+    border: 0;
+    background-color: #0275d8;
+    color: white;
+    font-weight: 100;
+    width: 100%;
+}

@@ -1,9 +1,11 @@
 import React, { PropTypes } from 'react'
+import './Message.css';
 
 const Message = ({ id, date, message }) => (
-  <li>
-    {date} : {message}
-  </li>
+  <p className="message-container">
+    <span className="message">{message}</span>
+    <span className="date">{date}</span>
+  </p>
 )
 
 Message.propTypes = {

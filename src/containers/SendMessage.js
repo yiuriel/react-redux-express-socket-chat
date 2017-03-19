@@ -11,10 +11,13 @@ import io from 'socket.io-client';
 let Message = ({ dispatch }) => {
   let input;
 
-  let socket = io();
-  socket.on('chat message', function (msg) {
-    dispatch(addMessage(msg.message))
-  });
+  let socket;
+  if (process.env.NODE_ENV === 'production') {
+    socket = io();
+    socket.on('chat message', function (msg) {
+      dispatch(addMessage(msg.message))
+    });
+  }
 
   return (
     <div className="message-send">
@@ -23,16 +26,17 @@ let Message = ({ dispatch }) => {
         if (!input.value.trim()) {
           return
         }
-        socket.emit('chat message', addMessage(input.value));
+
+        if (process.env.NODE_ENV === 'production') {
+          socket.emit('chat message', addMessage(input.value));
+        }
         dispatch(addMessage(input.value))
         input.value = ''
       }}>
         <input ref={node => {
           input = node
-        }} />
-        <button type="submit">
-          Enviar mensaje
-        </button>
+        }} type="text" />
+        <button type="submit">Enviar mensaje</button>
       </form>
     </div>
   )

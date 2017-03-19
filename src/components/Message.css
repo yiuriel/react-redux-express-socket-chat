@@ -1,0 +1,25 @@
+.message-container:first-child {
+  border-top: 0;
+}
+
+.message-container {
+  padding: .3rem .15rem;
+  margin: 0;
+  font-size: 12px;
+  font-family: "Roboto";
+  font-weight: 300;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  border-top: 1px solid #EEE;
+}
+
+.message-container .date {
+  margin-left: auto;
+  margin-bottom: auto;
+}
+
+.message-container .message {
+  max-width: 75%;
+}

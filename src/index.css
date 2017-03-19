@@ -9,12 +9,6 @@ ul {
   list-style: none;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
 #root, .chat-container {
   height: 100vh;
 }

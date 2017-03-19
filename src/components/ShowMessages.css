@@ -3,10 +3,3 @@
   overflow-x: auto;
   padding: .25rem;
 }
-
-.messages-view li {
-  padding: .1rem;
-  font-size: 12px;
-  font-family: "Roboto";
-  font-weight: 300;
-}

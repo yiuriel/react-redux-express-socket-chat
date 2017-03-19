@@ -3,6 +3,15 @@
     width: 100%;
     bottom: 0;
     border-top: 1px solid dodgerblue;
+    height: 7vh;
+}
+
+.message-send form {
+    height: 100%;
+}
+
+.message-send form button {
+    height: 100%;
 }
 
 .message-send input {
@@ -20,7 +29,6 @@
     width: 20%;
     border: 0;
     padding: 0;
-    height: 32px;
     background-color: dodgerblue;
     font-size: 13px;
     color: white;

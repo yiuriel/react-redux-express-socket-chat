@@ -4,14 +4,14 @@ import Message from './Message'
 import './ShowMessages.css'
 
 const Messages = ({ messages }) => (
-  <ul className="messages-view">
+  <div className="messages-view">
     {messages.map(message =>
       <Message
         key={message.id}
         {...message}
       />
     )}
-  </ul>
+  </div>
 )
 
 Messages.propTypes = {

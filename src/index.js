@@ -1,27 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components';
 import './index.css';
 
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-
-import injectTapEventPlugin from 'react-tap-event-plugin';
-injectTapEventPlugin();
-
 import { createStore } from 'redux'
-import { Provider } from 'react-redux'
+
+import { browserHistory } from 'react-router'
+import { syncHistoryWithStore } from 'react-router-redux'
 
 import reducer from './reducers'
 
+import Root from './containers/Root'
 import initialState from './initial/state';
 
 const store = createStore(reducer, initialState);
+const history = syncHistoryWithStore(browserHistory, store);
 
 ReactDOM.render(
-  <Provider store={store}>
-    <MuiThemeProvider>
-      <App />
-    </MuiThemeProvider>
-  </Provider>,
+  <Root store={store} history={history} />,
   document.getElementById('root')
 );

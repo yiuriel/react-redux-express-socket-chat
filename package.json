@@ -12,7 +12,8 @@
     "react-router-redux": "^4.0.5",
     "react-scripts": "0.9.5",
     "redux": "^3.6.0",
-    "socket.io": "^1.7.3"
+    "socket.io": "^1.7.3",
+    "socket.io-client": "^1.7.3"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"

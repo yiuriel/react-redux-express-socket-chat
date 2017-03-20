@@ -3,16 +3,24 @@ import Message from './Message'
 
 import './ShowMessages.css'
 
-const Messages = ({ messages }) => (
-  <div className="messages-view">
-    {messages.map(message =>
-      <Message
-        key={message.id}
-        {...message}
-      />
-    )}
-  </div>
-)
+const Messages = ({ messages }) => {
+  let container;
+  return (
+    <div className="messages-view" ref={(node) => {
+      if (node) {
+        container = node;
+      }
+      container.scrollTop = container.scrollHeight;
+      }}>
+      {messages.map(message =>
+        <Message
+          key={message.id}
+          {...message}
+        />
+      )}
+    </div>
+  )
+}
 
 Messages.propTypes = {
   messages: PropTypes.arrayOf(PropTypes.shape({

@@ -5,11 +5,6 @@
 
     .message-send form input {
         font-size: 16px;
-        width: 50%;
-    }
-
-    .message-send form button {
-        width: 50%;
     }
 }
 

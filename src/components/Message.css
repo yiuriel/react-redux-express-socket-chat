@@ -1,14 +1,19 @@
-.message-container:first-child {
-  border-top: 0;
-}
-
 .message-container {
-  padding: .3rem .15rem;
-  margin: 0;
+  padding: .3rem .75rem;
   font-size: 12px;
   font-family: "Roboto";
   font-weight: 300;
-  border-top: 1px solid #EEE;
+  background-color: rgba(255,255,255,0.35);
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.message-container.me {
+  margin: 0 .25rem .75rem 1.5rem;
+}
+
+.message-container.other {
+  margin: 0 1.5rem .75rem .25rem;
 }
 
 .message-container .message {

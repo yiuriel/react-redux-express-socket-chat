@@ -5,6 +5,11 @@
 }
 
 .messages-view {
+  background: #c2e59c;
+  background: -webkit-linear-gradient(right, #c2e59c, #64b3f4);
+  background: -moz-linear-gradient(right, #c2e59c, #64b3f4);
+  background: -o-linear-gradient(right, #c2e59c, #64b3f4);
+  background: linear-gradient(to left, #c2e59c, #64b3f4);
   height: 93vh;
   overflow-x: auto;
   padding: .25rem;

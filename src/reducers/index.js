@@ -10,7 +10,8 @@ const messages = (state = {}, action) => {
           message: action.message,
           date: action.date,
           id: action.id,
-          user_name: action.user_name
+          user_name: action.user_name,
+          me: action.me
         }
       ]
     default:

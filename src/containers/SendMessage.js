@@ -14,7 +14,7 @@ let Message = ({ dispatch, user }) => {
   if (process.env.NODE_ENV === 'production') {
     socket = io();
     socket.on('chat message', function (msg) {
-      dispatch(addMessage(msg.message, msg.user_name))
+      dispatch(addMessage(msg.message, msg.user_name, false))
     });
   }
 
@@ -27,15 +27,20 @@ let Message = ({ dispatch, user }) => {
         }
 
         if (process.env.NODE_ENV === 'production') {
-          socket.emit('chat message', addMessage(input.value, user));
+          socket.emit('chat message', addMessage(input.value, user, true));
         }
-        dispatch(addMessage(input.value, user))
+        dispatch(addMessage(input.value, user, true))
         input.value = ''
       }}>
         <input ref={node => {
           input = node
         }} type="text" />
-        <button type="submit">Enviar mensaje</button>
+        <button type="submit">
+          <span className="visible-md">Enviar mensaje</span>
+          <span className="hidden-md">
+            <span className="glyphicon glyphicon-send" style={{fontSize: '20px'}} aria-hidden="true"></span>
+          </span>
+        </button>
       </form>
     </div>
   )

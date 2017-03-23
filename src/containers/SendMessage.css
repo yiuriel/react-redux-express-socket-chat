@@ -1,3 +1,13 @@
+@media all and (max-width: 320px) {
+    .message-send form input {
+        width: 100%;
+    }
+
+    .message-send form button {
+        display: none;
+    }
+}
+
 @media all and (max-width: 768px) {
     .message-send {
         height: 10vh;
@@ -5,6 +15,11 @@
 
     .message-send form input {
         font-size: 16px;
+        width: 85%;
+    }
+
+    .message-send form button {
+        width: 15%;
     }
 }
 
@@ -12,7 +27,7 @@
     position: absolute;
     width: 100%;
     bottom: 0;
-    border-top: 1px solid dodgerblue;
+    box-shadow: 0 -2px 15px #CCC;
     height: 7vh;
 }
 
@@ -39,7 +54,7 @@
     width: 20%;
     border: 0;
     padding: 0;
-    background-color: dodgerblue;
+    background-color: #333;
     font-size: 13px;
     color: white;
 }

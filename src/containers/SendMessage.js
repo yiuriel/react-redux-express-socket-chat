@@ -36,8 +36,8 @@ let Message = ({ dispatch, user }) => {
           input = node
         }} type="text" />
         <button type="submit">
-          <span className="visible-md">Enviar mensaje</span>
-          <span className="hidden-md">
+          <span className="visible-md visible-lg">Enviar mensaje</span>
+          <span className="hidden-md hidden-lg">
             <span className="glyphicon glyphicon-send" style={{fontSize: '20px'}} aria-hidden="true"></span>
           </span>
         </button>

@@ -6,17 +6,13 @@ import { addMessage } from '../actions'
 
 import './SendMessage.css';
 
-import io from 'socket.io-client';
+import Socket from '../helpers/Socket';
 
 let Message = ({ dispatch, user }) => {
   let input;
-  let socket;
-  if (process.env.NODE_ENV === 'production') {
-    socket = io();
-    socket.on('chat message', function (msg) {
-      dispatch(addMessage(msg.message, msg.user_name, false))
-    });
-  }
+  Socket.on('chat message', function (msg) {
+    dispatch(addMessage(msg.message, msg.user_name, false))
+  });
 
   return (
     <div className="message-send">
@@ -26,9 +22,7 @@ let Message = ({ dispatch, user }) => {
           return
         }
 
-        if (process.env.NODE_ENV === 'production') {
-          socket.emit('chat message', addMessage(input.value, user, true));
-        }
+        Socket.emit('chat message', addMessage(input.value, user, true));
         dispatch(addMessage(input.value, user, true))
         input.value = ''
       }}>

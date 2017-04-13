@@ -29,6 +29,7 @@
     bottom: 0;
     box-shadow: 0 -2px 15px #CCC;
     height: 7vh;
+    background-color: white;
 }
 
 .message-send form {

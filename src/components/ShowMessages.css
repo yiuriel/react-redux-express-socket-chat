@@ -5,7 +5,6 @@
 }
 
 .messages-view {
-  background: #FFF;
   height: 93vh;
   overflow-x: auto;
   padding: .25rem;

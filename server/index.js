@@ -12,6 +12,11 @@
         res.sendFile(__dirname + '/../build/index.html');
     });
 
+    // since router doesn`t work well in prod lets catch /chat and redirect
+    app.get('/chat', function(req, res){
+        res.redirect('/')
+    });
+
     io.on('connection', function(socket){
         socket.on('chat message', function(msg){
             console.log(msg);
